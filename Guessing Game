@@ -1,0 +1,29 @@
+import random 
+
+def main():
+
+    initial=int(input("Enter the intial range:"))
+    final=int(input("Enter the final range:"))
+
+    number=random.randint(initial,final)
+
+    tries=0
+
+    while True:
+
+        x=int(input("Enter the number:"))
+
+        if x==number:
+            print("Your answer is correct!, it took you",tries, "tries to answer")
+            break
+        
+        elif x>number:
+            print("Your guess is too big, guess again!")
+
+        elif x<number:
+            print("Your guess is too small, guess again!")
+
+        tries+=1
+
+main()
+
